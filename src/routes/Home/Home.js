@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, Button } from 'react-native';
+import { Text, View, Button, NativeModules } from 'react-native';
 
 import Animated, {
   useSharedValue,
@@ -56,6 +56,11 @@ function Box() {
 
 const Home = props => {
   const { handleDeviceInfoNavigate, handleSliderExampleNavigate } = props;
+
+  const increment = () => {
+    var result = NativeModules.ViewController.increment(res => console.log(res))
+  } 
+
   return (
     <View style={styles.container}>
       <Box />
@@ -64,6 +69,7 @@ const Home = props => {
       <Text onPress={handleSliderExampleNavigate}>
         Navigate to Slider-example
       </Text>
+      <Button title="Go Back" onPress={increment}/>
       <GiftCard delay={300} containerStyle={styles.giftCardContainer} />
     </View>
   );

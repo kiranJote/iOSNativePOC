@@ -20,18 +20,18 @@ class ViewController: UIViewController {
     }
     
     func setupUI() {
-        //nativeButton.addTarget(self, action: #selector(nativeButtonTapped), for: .touchUpInside)
+        nativeButton.addTarget(self, action: #selector(nativeButtonTapped), for: .touchUpInside)
     }
     
-//    @objc
-//    func increment(_ callback:RCTResponseSenderBlock) {
-//        DispatchQueue.main.async {
-//            let vc = ThirdViewController()
-//            let top = UIApplication.shared.windows.first { $0.isKeyWindow }?.rootViewController as? UINavigationController
-//            top?.pushViewController(vc, animated: true)
-//        }
-//        callback(["Done"])
-//    }
+    @objc
+    func increment(_ callback:RCTResponseSenderBlock) {
+        DispatchQueue.main.async {
+//          let top = UIApplication.shared.windows.first { $0.isKeyWindow }?.rootViewController as? UINavigationController
+            let top = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController
+            top?.popViewController(animated: true)
+        }
+        callback(["Done"])
+    }
     
     @objc
     static func requiresMainQueueSetup() -> Bool {
@@ -47,13 +47,13 @@ class ViewController: UIViewController {
     
     @IBAction func highScoreButtonTapped(sender : UIButton) {
         NSLog("Hello")
-        let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
-        let mockData:NSDictionary = ["scores":
-                                        [
-                                            ["name":"Alex", "value":"42"],
-                                            ["name":"Joel", "value":"10"]
-                                        ]
-        ]
+//        let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
+//        let mockData:NSDictionary = ["scores":
+//                                        [
+//                                            ["name":"Alex", "value":"42"],
+//                                            ["name":"Joel", "value":"10"]
+//                                        ]
+//        ]
         //        let rootView = RCTRootView(
         //            bundleURL: jsCodeLocation!,
         //            moduleName: "App",
@@ -68,5 +68,22 @@ class ViewController: UIViewController {
         vc.view = rootView
         self.navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+extension UIApplication {
+    
+    var keyWindow: UIWindow? {
+        // Get connected scenes
+        return UIApplication.shared.connectedScenes
+            // Keep only active scenes, onscreen and visible to the user
+            .filter { $0.activationState == .foregroundActive }
+            // Keep only the first `UIWindowScene`
+            .first(where: { $0 is UIWindowScene })
+            // Get its associated windows
+            .flatMap({ $0 as? UIWindowScene })?.windows
+            // Finally, keep only the key window
+            .first(where: \.isKeyWindow)
+    }
+    
 }
 
