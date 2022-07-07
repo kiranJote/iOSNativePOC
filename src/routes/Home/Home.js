@@ -59,7 +59,7 @@ const Home = props => {
 
   const increment = () => {
     var result = NativeModules.ViewController.increment(res => console.log(res))
-  } 
+  }
 
   return (
     <View style={styles.container}>

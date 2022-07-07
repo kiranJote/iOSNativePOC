@@ -10,7 +10,8 @@
     "test": "jest",
     "clean": "cd android/ && ./gradlew clean && cd ../",
     "clean-build": "yarn clean && yarn android",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.17",

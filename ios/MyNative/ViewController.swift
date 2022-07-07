@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     @objc
     func increment(_ callback:RCTResponseSenderBlock) {
         DispatchQueue.main.async {
-//          let top = UIApplication.shared.windows.first { $0.isKeyWindow }?.rootViewController as? UINavigationController
             let top = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController
             top?.popViewController(animated: true)
         }
@@ -47,24 +46,28 @@ class ViewController: UIViewController {
     
     @IBAction func highScoreButtonTapped(sender : UIButton) {
         NSLog("Hello")
-//        let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
-//        let mockData:NSDictionary = ["scores":
-//                                        [
-//                                            ["name":"Alex", "value":"42"],
-//                                            ["name":"Joel", "value":"10"]
-//                                        ]
-//        ]
-        //        let rootView = RCTRootView(
-        //            bundleURL: jsCodeLocation!,
-        //            moduleName: "App",
-        //            initialProperties: mockData as [NSObject : AnyObject],
-        //            launchOptions: nil
-        //        )
-
         let rootView = RCTRootView(bridge: (UIApplication.shared.delegate as! AppDelegate).bridge!,
                                    moduleName: "App",
                                    initialProperties: nil)
         let vc = ThirdViewController()
+        vc.view = rootView
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func SecondReactNativeScreenTap(_ sender: UIButton) {
+        let rootView = RCTRootView(bridge: (UIApplication.shared.delegate as! AppDelegate).bridge!,
+                                   moduleName: "FirstMultipleScreen",
+                                   initialProperties: nil)
+        let vc = UIViewController()
+        vc.view = rootView
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func ThirdReactNativeScreenTap(_ sender: UIButton) {
+        let rootView = RCTRootView(bridge: (UIApplication.shared.delegate as! AppDelegate).bridge!,
+                                   moduleName: "SecondMultipleScreen",
+                                   initialProperties: nil)
+        let vc = UIViewController()
         vc.view = rootView
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -86,4 +89,50 @@ extension UIApplication {
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
+//        let mockData:NSDictionary = ["scores":
+//                                        [
+//                                            ["name":"Alex", "value":"42"],
+//                                            ["name":"Joel", "value":"10"]
+//                                        ]
+//        ]
+//        let rootView = RCTRootView(
+//            bundleURL: jsCodeLocation!,
+//            moduleName: "App",
+//            initialProperties: mockData as [NSObject : AnyObject],
+//            launchOptions: nil
+//        )
 
