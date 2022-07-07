@@ -19,6 +19,7 @@
 		9241F4B928584C0B00857D0B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9241F4B828584C0B00857D0B /* Counter.swift */; };
 		9241F4BB28584C3A00857D0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9241F4BA28584C3A00857D0B /* ViewController.m */; };
 		9241F4BD2858A27300857D0B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9241F4BC2858A27300857D0B /* ThirdViewController.swift */; };
+		9256FDA1286EC18B004DBFBE /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 9256FDA0286EC18B004DBFBE /* main.jsbundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		9241F4B828584C0B00857D0B /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		9241F4BA28584C3A00857D0B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9241F4BC2858A27300857D0B /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		9256FDA0286EC18B004DBFBE /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		9241F4932851C3EE00857D0B = {
 			isa = PBXGroup;
 			children = (
+				9256FDA0286EC18B004DBFBE /* main.jsbundle */,
 				9241F49E2851C3EE00857D0B /* MyNative */,
 				9241F49D2851C3EE00857D0B /* Products */,
 				2690B6B2BDA59E19A6CBBA09 /* Pods */,
@@ -169,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9256FDA1286EC18B004DBFBE /* main.jsbundle in Resources */,
 				9241F4AC2851C3F000857D0B /* LaunchScreen.storyboard in Resources */,
 				9241F4A92851C3F000857D0B /* Assets.xcassets in Resources */,
 				9241F4A72851C3EE00857D0B /* Main.storyboard in Resources */,
@@ -382,6 +386,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9TADUM7KLZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyNative/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -413,6 +418,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9TADUM7KLZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyNative/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
