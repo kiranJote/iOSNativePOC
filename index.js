@@ -3,6 +3,7 @@
  */
 
 import { AppRegistry, LogBox } from 'react-native';
+import { Provider } from 'react-redux';
 import App from './src/app';
 import FirstMultipleScreen from './src/MultipleScreen'
 import SecondMultipleScreen from './src/MultipleScreen2'

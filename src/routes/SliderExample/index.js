@@ -21,7 +21,6 @@ const SliderExample = props => {
   };
 
   const keyExtractor = item => item;
-
   return (
     <FlatList
       removeClippedSubviews

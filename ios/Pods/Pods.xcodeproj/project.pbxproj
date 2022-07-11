@@ -138,7 +138,7 @@
 		46EB2E000060E0 /* RNForceTouchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000006C0 /* RNForceTouchHandler.m */; };
 		46EB2E000060F0 /* RNLongPressHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000006E0 /* RNLongPressHandler.m */; };
 		46EB2E00006100 /* RNManualHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000700 /* RNManualHandler.m */; };
-		46EB2E00006110 /* RNNativeViewHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000720 /* RNNativeViewHandler.mm */; };
+		46EB2E00006110 /* RNNativeViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000720 /* RNNativeViewHandler.m */; };
 		46EB2E00006120 /* RNPanHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000740 /* RNPanHandler.m */; };
 		46EB2E00006130 /* RNPinchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000760 /* RNPinchHandler.m */; };
 		46EB2E00006140 /* RNRotationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000780 /* RNRotationHandler.m */; };
@@ -2549,7 +2549,7 @@
 		46EB2E000006F0 /* RNManualHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RNManualHandler.h; sourceTree = "<group>"; };
 		46EB2E00000700 /* RNManualHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RNManualHandler.m; sourceTree = "<group>"; };
 		46EB2E00000710 /* RNNativeViewHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RNNativeViewHandler.h; sourceTree = "<group>"; };
-		46EB2E00000720 /* RNNativeViewHandler.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RNNativeViewHandler.mm; sourceTree = "<group>"; };
+		46EB2E00000720 /* RNNativeViewHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RNNativeViewHandler.m; sourceTree = "<group>"; };
 		46EB2E00000730 /* RNPanHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RNPanHandler.h; sourceTree = "<group>"; };
 		46EB2E00000740 /* RNPanHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RNPanHandler.m; sourceTree = "<group>"; };
 		46EB2E00000750 /* RNPinchHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RNPinchHandler.h; sourceTree = "<group>"; };
@@ -4881,7 +4881,7 @@
 				46EB2E000006F0 /* RNManualHandler.h */,
 				46EB2E00000700 /* RNManualHandler.m */,
 				46EB2E00000710 /* RNNativeViewHandler.h */,
-				46EB2E00000720 /* RNNativeViewHandler.mm */,
+				46EB2E00000720 /* RNNativeViewHandler.m */,
 				46EB2E00000730 /* RNPanHandler.h */,
 				46EB2E00000740 /* RNPanHandler.m */,
 				46EB2E00000750 /* RNPinchHandler.h */,
@@ -9234,7 +9234,7 @@
 				46EB2E000060F0 /* RNLongPressHandler.m in Sources */,
 				46EB2E00006200 /* RNManualActivationRecognizer.m in Sources */,
 				46EB2E00006100 /* RNManualHandler.m in Sources */,
-				46EB2E00006110 /* RNNativeViewHandler.mm in Sources */,
+				46EB2E00006110 /* RNNativeViewHandler.m in Sources */,
 				46EB2E00006120 /* RNPanHandler.m in Sources */,
 				46EB2E00006130 /* RNPinchHandler.m in Sources */,
 				46EB2E00006210 /* RNRootViewGestureRecognizer.m in Sources */,

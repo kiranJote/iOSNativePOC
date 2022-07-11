@@ -18,9 +18,9 @@ const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
 };
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+// const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const store = createStore(persistedReducer, composedEnhancers);
+const store = createStore(rootReducer, composedEnhancers);
 epicMiddleware.run(rootEpic);
 const persistor = persistStore(store);
 

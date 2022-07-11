@@ -17,6 +17,9 @@ const Actions = {
     payload: { routes, index },
     type: Types.NAVIGATE,
   }),
+  increment: () => ({
+    type: 'increment'
+  })
 };
 
 export default Actions;

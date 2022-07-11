@@ -6,12 +6,26 @@ import {
   NativeModules,
   Button,
 } from 'react-native';
+import { Provider, useSelector } from 'react-redux';
+import { store } from '../store';
 
+const SecondModule = () => {
+  return (
+    <Provider store={store} >
+      <SecondMultipleScreen/>
+      </Provider>
+  )
+}
 
 const SecondMultipleScreen = () => {
-  const increment = () => {
-    var result = NativeModules.ViewController.increment(res => console.log(res))
-  }
+  // const increment = () => {
+  //   var result = NativeModules.ViewController.increment(res => console.log(res))
+  // }
+
+  const increment = useSelector(state => state.navigation.increment)
+  
+  console.log('increment second screen', increment)
+
 
   return (
     <View style={styles.container}>
@@ -50,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SecondMultipleScreen;
+export default SecondModule;

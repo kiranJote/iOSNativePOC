@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import { Text, View, Button, NativeModules } from 'react-native';
 
 import Animated, {
@@ -9,6 +10,7 @@ import Animated, {
   Easing,
   withSequence,
 } from 'react-native-reanimated';
+import { useSelector } from 'react-redux';
 
 import GiftCard from '../../components/GiftCard';
 
@@ -55,11 +57,21 @@ function Box() {
 }
 
 const Home = props => {
-  const { handleDeviceInfoNavigate, handleSliderExampleNavigate } = props;
+  const { handleDeviceInfoNavigate, handleSliderExampleNavigate, increment } = props;
 
-  const increment = () => {
-    var result = NativeModules.ViewController.increment(res => console.log(res))
-  }
+  // const increment = () => {
+  //   var result = NativeModules.ViewController.increment(res => console.log(res))
+  // }
+
+  const store = useSelector(state => state?.navigation)
+
+
+  useEffect(()=>{
+    increment()
+  }, [])
+  
+
+  console.log('showww', store)
 
   return (
     <View style={styles.container}>
