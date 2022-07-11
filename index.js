@@ -11,7 +11,7 @@ LogBox.ignoreLogs([
   "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
 ]);
 
-console.log("App loaded")
+console.log("App")
 
 AppRegistry.registerComponent('FirstMultipleScreen', () => FirstMultipleScreen);
 AppRegistry.registerComponent('SecondMultipleScreen', () => SecondMultipleScreen);
